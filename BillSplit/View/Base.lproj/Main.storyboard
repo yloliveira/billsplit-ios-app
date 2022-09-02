@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="18.75" y="85"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="966-f3-Rrd">
             <objects>
-                <viewController id="xzc-PM-eLv" sceneMemberID="viewController">
+                <viewController id="xzc-PM-eLv" customClass="ResultViewController" customModule="BillSplit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUC-eN-50I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
