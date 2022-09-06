@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
         
         let total = totalWithTip / peopleQuantity
         print(total)
+        performSegue(withIdentifier: "home_to_result", sender: self)
     }
     
 }

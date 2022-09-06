@@ -182,28 +182,29 @@
                         <outlet property="tipSlider" destination="ffE-4L-QPM" id="tZ5-vX-vEN"/>
                         <outlet property="tipValueLabel" destination="FQY-UP-3mZ" id="bbs-Bc-Mgp"/>
                         <outlet property="totalTextInput" destination="uS8-Wh-z5R" id="rOI-FN-g9n"/>
+                        <segue destination="xzc-PM-eLv" kind="show" identifier="home_to_result" id="wuc-Az-bWf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="85"/>
+            <point key="canvasLocation" x="39" y="84"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="966-f3-Rrd">
             <objects>
                 <viewController id="xzc-PM-eLv" customClass="ResultViewController" customModule="BillSplit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUC-eN-50I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="abg-uA-psf" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-XA-L5N" userLabel="TotalView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="243.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NSt-vz-8EE">
-                                                <rect key="frame" x="20" y="78.5" width="374" height="93"/>
+                                                <rect key="frame" x="20" y="75.5" width="374" height="93"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total por pessoa:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLj-0o-XIg">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -234,7 +235,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkP-PA-6aO" userLabel="DescriptionView">
-                                        <rect key="frame" x="0.0" y="269.5" width="414" height="292"/>
+                                        <rect key="frame" x="0.0" y="263.5" width="414" height="285.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dividio entre 4 pessoas com 20% de acréscimo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-Gg-Rsa">
                                                 <rect key="frame" x="0.0" y="30" width="414" height="47.5"/>
@@ -250,10 +251,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTg-KS-zhd" userLabel="ButtonView">
-                                        <rect key="frame" x="0.0" y="581.5" width="414" height="280.5"/>
+                                        <rect key="frame" x="0.0" y="569" width="414" height="273"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLB-IQ-jG2">
-                                                <rect key="frame" x="107" y="222.5" width="200" height="38"/>
+                                                <rect key="frame" x="107" y="215" width="200" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="6Lv-0V-SrK"/>
                                                 </constraints>
@@ -283,6 +284,7 @@
                             <constraint firstItem="abg-uA-psf" firstAttribute="leading" secondItem="eKd-or-nAx" secondAttribute="leading" id="khc-bx-aaJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f6U-MK-TKM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFp-re-k2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
