@@ -71,10 +71,13 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-4L-QPM">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-4L-QPM">
                                                         <rect key="frame" x="-2" y="26" width="378" height="31"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                         <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                                        <connections>
+                                                            <action selector="tipSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Aoa-2y-dJ0"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <constraints>
@@ -106,14 +109,17 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rew-TW-Fiw">
                                                         <rect key="frame" x="0.0" y="41" width="374" height="84"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vk-92-eC5">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vk-92-eC5">
                                                                 <rect key="frame" x="178.5" y="0.0" width="17" height="32"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                                 <color key="textColor" systemColor="systemGreenColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YiY-6S-RgI">
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YiY-6S-RgI">
                                                                 <rect key="frame" x="140" y="52" width="94" height="32"/>
+                                                                <connections>
+                                                                    <action selector="peopleQuantityValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="d8X-2G-cuU"/>
+                                                                </connections>
                                                             </stepper>
                                                         </subviews>
                                                     </stackView>
@@ -148,6 +154,9 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qML-Fo-0bN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -168,6 +177,12 @@
                             <constraint firstItem="Olk-IP-h6A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xfL-78-i44"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="peopleQuantityLabel" destination="7vk-92-eC5" id="nMt-Gj-JMy"/>
+                        <outlet property="tipSlider" destination="ffE-4L-QPM" id="tZ5-vX-vEN"/>
+                        <outlet property="tipValueLabel" destination="FQY-UP-3mZ" id="bbs-Bc-Mgp"/>
+                        <outlet property="totalTextInput" destination="uS8-Wh-z5R" id="rOI-FN-g9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
