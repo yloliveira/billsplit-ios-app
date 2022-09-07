@@ -8,11 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     @IBOutlet weak var totalTextInput: UITextField!
     @IBOutlet weak var tipValueLabel: UILabel!
     @IBOutlet weak var tipSlider: UISlider!
     @IBOutlet weak var peopleQuantityLabel: UILabel!
+    @IBOutlet weak var calculateButton: UIButton!
     
     var billBrain = BillBrain()
     
@@ -23,6 +23,14 @@ class HomeViewController: UIViewController {
     @IBAction func tipSliderValueChanged(_ sender: UISlider) {
         let value = String(format: "%.0f", sender.value)
         tipValueLabel.text = "\(value)%"
+    }
+    
+    @IBAction func inputTextEditingChanged(_ sender: UITextField) {
+        if (sender.text == nil || sender.text!.count == 0) {
+            disableButton()
+        } else {
+            enableButton()
+        }
     }
     
     @IBAction func peopleQuantityValueChanged(_ sender: UIStepper) {
@@ -47,4 +55,11 @@ class HomeViewController: UIViewController {
         performSegue(withIdentifier: "home_to_result", sender: self)
     }
     
+    func disableButton() {
+        calculateButton.isEnabled = false
+    }
+    
+    func enableButton() {
+        calculateButton.isEnabled = true
+    }
 }

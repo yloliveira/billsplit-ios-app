@@ -30,6 +30,9 @@
                                                         <color key="textColor" systemColor="systemGreenColor"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="inputTextEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="FFz-49-iH4"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -143,7 +146,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nM-4P-Ypn" userLabel="ButtonView">
                                         <rect key="frame" x="0.0" y="647" width="414" height="215"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwk-Mw-0nN">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwk-Mw-0nN">
                                                 <rect key="frame" x="107" y="157" width="200" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="aUX-Qx-ODL"/>
@@ -178,6 +181,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calculateButton" destination="Gwk-Mw-0nN" id="9EH-zf-hbN"/>
                         <outlet property="peopleQuantityLabel" destination="7vk-92-eC5" id="nMt-Gj-JMy"/>
                         <outlet property="tipSlider" destination="ffE-4L-QPM" id="tZ5-vX-vEN"/>
                         <outlet property="tipValueLabel" destination="FQY-UP-3mZ" id="bbs-Bc-Mgp"/>
