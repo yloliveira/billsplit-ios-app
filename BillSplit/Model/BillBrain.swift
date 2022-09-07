@@ -16,8 +16,8 @@ struct BillBrain {
         description = "Dividido entre \(String(format: "%.0f", quantity)) pessoas, com \(String(format: "%.0f", tip))% de acréscimo."
     }
     
-    func getTotalString() -> String {
-        return String(format: "%.2f", total!)
+    func getTotal() -> Float {
+        return total ?? 0.0
     }
     
     func getDescription() -> String {

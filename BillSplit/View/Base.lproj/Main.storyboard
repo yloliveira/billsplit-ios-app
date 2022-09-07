@@ -264,6 +264,9 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="xzc-PM-eLv" eventType="touchUpInside" id="MiN-To-jxj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -285,6 +288,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f6U-MK-TKM"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="m1P-Gg-Rsa" id="OJc-HZ-BOl"/>
+                        <outlet property="totalPerPersonLabel" destination="owt-SU-sxK" id="NSC-fH-4sG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFp-re-k2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
