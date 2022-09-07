@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalTextInput.keyboardType = UIKeyboardType.decimalPad
     }
     
     @IBAction func tipSliderValueChanged(_ sender: UISlider) {
@@ -46,7 +47,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        let inputValue: Float = Float(totalTextInput.text!)!
+        let text = totalTextInput?.text ?? "0,0"
+        let replaced = text.replacingOccurrences(of: ",", with: ".")
+
+        let inputValue: Float = Float(replaced)!
         let tip = tipSlider.value
         let peopleQuantity: Float = Float(peopleQuantityLabel.text!)!
         
