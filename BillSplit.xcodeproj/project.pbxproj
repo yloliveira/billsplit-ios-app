@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40CA0E228C91030003BEF5F /* BillBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CA0E128C91030003BEF5F /* BillBrain.swift */; };
 		C426A71928C25C9700393E7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426A71828C25C9700393E7D /* AppDelegate.swift */; };
 		C426A71B28C25C9700393E7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426A71A28C25C9700393E7D /* SceneDelegate.swift */; };
 		C426A71D28C25C9700393E7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C426A71C28C25C9700393E7D /* HomeViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40CA0E128C91030003BEF5F /* BillBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillBrain.swift; sourceTree = "<group>"; };
 		C426A71528C25C9700393E7D /* BillSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C426A71828C25C9700393E7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C426A71A28C25C9700393E7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40CA0E328C91036003BEF5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C40CA0E128C91030003BEF5F /* BillBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C426A70C28C25C9700393E7D = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +70,9 @@
 			children = (
 				C426A71828C25C9700393E7D /* AppDelegate.swift */,
 				C426A71A28C25C9700393E7D /* SceneDelegate.swift */,
-				C426A72D28C25CDE00393E7D /* Controller */,
+				C40CA0E328C91036003BEF5F /* Model */,
 				C426A72C28C25CD500393E7D /* View */,
+				C426A72D28C25CDE00393E7D /* Controller */,
 				C426A72628C25C9900393E7D /* Info.plist */,
 			);
 			path = BillSplit;
@@ -160,6 +171,7 @@
 				C426A71D28C25C9700393E7D /* HomeViewController.swift in Sources */,
 				C426A71928C25C9700393E7D /* AppDelegate.swift in Sources */,
 				C426A71B28C25C9700393E7D /* SceneDelegate.swift in Sources */,
+				C40CA0E228C91030003BEF5F /* BillBrain.swift in Sources */,
 				C43C4AE528C2B5D3007EB47E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

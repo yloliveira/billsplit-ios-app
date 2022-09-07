@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tipSlider: UISlider!
     @IBOutlet weak var peopleQuantityLabel: UILabel!
     
+    var billBrain = BillBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +30,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        let inputValue: Float = Float(totalTextInput.text!)!
+        let tip = tipSlider.value
         let peopleQuantity: Float = Float(peopleQuantityLabel.text!)!
-        let inputText: Float = Float(totalTextInput.text!)!
         
-        let totalWithTip = inputText + (inputText * (tipSlider.value / 100))
-        
-        let total = totalWithTip / peopleQuantity
-        print(total)
+        billBrain.calculate(value: inputValue, tip: tip, quantity: peopleQuantity)
+
         performSegue(withIdentifier: "home_to_result", sender: self)
     }
     
